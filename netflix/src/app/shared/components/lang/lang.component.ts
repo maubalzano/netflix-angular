@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./lang.component.scss']
 })
 export class LangComponent implements OnInit {
-
+  lang: string = 'Italiano';
   constructor() { }
 
   ngOnInit(): void {
