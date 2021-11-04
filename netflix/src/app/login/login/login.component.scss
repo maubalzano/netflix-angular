@@ -1,0 +1,10 @@
+.placeholder-custom::placeholder{
+    color: gainsboro;
+}
+
+button{
+   background-color:  #e50914;
+    &:hover{
+        background-color:  #e50914;
+    }
+}
