@@ -8,6 +8,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NavbarComponent } from './shared/components/navbar/navbar.component';
 import { LangComponent } from './shared/components/lang/lang.component';
 import { LogBtnComponent } from './shared/components/log-btn/log-btn.component';
+import { LoginComponent } from './login/login/login.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { LogBtnComponent } from './shared/components/log-btn/log-btn.component';
     HomeComponent,
     NavbarComponent,
     LangComponent,
-    LogBtnComponent
+    LogBtnComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
