@@ -12,9 +12,12 @@
     src: url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Md.woff2);
 }
 *{
-    -webkit-font-smoothing:antialiased
+   box-sizing: border-box;
+  -webkit-font-smoothing:antialiased
 }
 body{
     font-family: 'NFSans_Regular';
     background-color: #000;
 }
+
+
