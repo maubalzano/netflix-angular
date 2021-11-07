@@ -9,6 +9,11 @@ import { NavbarComponent } from './shared/components/navbar/navbar.component';
 import { LangComponent } from './shared/components/lang/lang.component';
 import { LogBtnComponent } from './shared/components/log-btn/log-btn.component';
 import { LoginComponent } from './login/login/login.component';
+import { FaqContainerComponent } from './home/faq-container/faq-container.component';
+import { FaqSingleComponent } from './home/faq-single/faq-single.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ServicesComponent } from './home/services/services.component';
+import { ServicesSingleComponent } from './home/services-single/services-single.component';
 
 @NgModule({
   declarations: [
@@ -17,12 +22,17 @@ import { LoginComponent } from './login/login/login.component';
     NavbarComponent,
     LangComponent,
     LogBtnComponent,
-    LoginComponent
+    LoginComponent,
+    FaqContainerComponent,
+    FaqSingleComponent,
+    ServicesComponent,
+    ServicesSingleComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
