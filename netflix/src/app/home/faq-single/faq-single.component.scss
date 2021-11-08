@@ -12,5 +12,19 @@
     h3{ 
         font-size:26px
     }
+    svg{
+        width:26px
+    }
     
+}
+@media screen and (max-width: 990px){
+    .question, .answer{
+        padding:16px 24px;
+        h3{
+            font-size:20px
+        }
+        svg{
+            width:20px
+        }
+    }
 }

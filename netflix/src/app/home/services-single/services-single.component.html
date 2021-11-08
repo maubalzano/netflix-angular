@@ -1,13 +1,13 @@
-<div class="d-flex justify-content-around align-items-center text-white col-12 service-container" [class.container-reverse]="index%2==1"  >
-  <div class="p-3">
+<div [class.containerReverse]="index%2==1" class="position-relative d-flex justify-content-center align-items-center text-white col-12 service-container containerReverse"   >
+  <div class="position-relative col-lg-6 text-md-center text-lg-left ">
    <h2>{{service.text.title}}</h2>
    <p>{{service.text.description}}</p>
 
     </div>
-    <div class="p-4 col-6" style="position:relative">
+    <div class="animation d-flex justify-content-center position-relative">
 
       <img [src]="service.graphic.img.imgUrl" [style]="service.graphic.img.style">
-      <div *ngIf="service.graphic.animationHTML" [style]="service.graphic.animationStyle" [innerHTML]="service.graphic.animationHTML">
+      <div  *ngIf="service.graphic.animationHTML" [style]="service.graphic.animationStyle" [innerHTML]="service.graphic.animationHTML">
 
       </div>
   </div>

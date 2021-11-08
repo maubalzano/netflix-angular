@@ -23,10 +23,10 @@ export const NFServices: NFService[] = [
             img: 
             {
                 imgUrl: "https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/tv.png",
-                style: "z-index:2;position:relative"
+                style: "z-index:2;position:relative;max-width: 100%"
             },
-            animationStyle: "max-width: 73%;max-height: 54%;position: absolute;top: 46%;left: 50%;transform: translate(-50%,-50%);z-index:1",
-            animationHTML: "<video muted autoplay loop src='https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-tv-0819.m4v' style=''></video>"
+            animationStyle: "width: 74%;height: 54%;position: absolute;top: 46%;left: 50%;transform: translate(-50%,-50%);z-index:1",
+            animationHTML: "<video muted autoplay loop width='100%' src='https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-tv-0819.m4v' style=''></video>"
             
         }
     },
@@ -39,7 +39,7 @@ export const NFServices: NFService[] = [
             img: 
             {
                 imgUrl: "https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/mobile-0819.jpg",
-                style: "z-index:-1;position:relative"
+                style: "z-index:-1;position:relative;max-width:100%"
             },
             animationStyle: "padding:5px;border: 2px solid rgba(255,255,255,.25);border-radius: 0.75em;box-shadow: 0 0 2em 0 #000;position: absolute;left: 50%;bottom: 8%;background:#000;display: flex;flex-direction:row;align-items: center;width: 55%;min-width: 15em;transform: translateX(-50%)",
             animationHTML: `<img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/boxshot.png" width="58px"/><span class="p-3 d-flex flex-column"><div class="text-white">Stranger Things</div><div class="text-primary">Download in corso...</div></span><img width="48px"src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/download-icon.gif">`
@@ -55,10 +55,10 @@ export const NFServices: NFService[] = [
             img:
             {
                 imgUrl: "https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/device-pile.png",
-                style: "z-index:1;position:relative"
+                style: "z-index:1;position:relative;max-width:100%"
             },
             animationStyle:"width: 100%;height: 100%;max-width: 63%;max-height: 47%;position: absolute;top: 34%;left: 50%;transform: translate(-50%,-50%);" ,
-            animationHTML: "<video muted autoplay loop width='100%'src='https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-devices.m4v'></video>"
+            animationHTML: "<video muted autoplay loop width='100%' src='https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-devices.m4v'></video>"
         } 
     },
     {

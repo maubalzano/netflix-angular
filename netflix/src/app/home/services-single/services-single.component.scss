@@ -1,12 +1,40 @@
+:host{
+  border-bottom:solid 8px #222;
+  padding:70px 45px;
+}
 h2{
   font-size: 50px;
-
+  font-family: 'NFSans_Medium';
 }
 
 p{
   font-size: 26px;
+  margin: 0.75em 0em;
+  line-height: 2.2rem;
 }
-
-.container-reverse {
+.service-container{
+  max-width:1100px;
+  gap:40px;
+  padding:0
+  
+}
+.containerReverse {
   flex-flow: row-reverse;
+}
+@media screen and (max-width: 990px){
+  .service-container{
+    flex-direction: column;
+    text-align: center;
+    gap:0px;
+    h2{
+      font-size: 40px;
+    }
+    p{
+      font-size:20px;
+      line-height:1.8rem
+    }
+    img{
+      margin-top:-40px
+    }
+  }
 }

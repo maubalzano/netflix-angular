@@ -3,6 +3,8 @@
 /* Importing Bootstrap SCSS file. */
 @import '~bootstrap/scss/bootstrap';
 
+$enable-responsive-font-sizes : true;
+
 @font-face {
     font-family: 'NFSans_Regular';
     src: url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Rg.woff2);
@@ -13,7 +15,7 @@
 }
 *{
    box-sizing: border-box;
-  -webkit-font-smoothing:antialiased
+  -webkit-font-smoothing:antialiased;
 }
 body{
     font-family: 'NFSans_Regular';

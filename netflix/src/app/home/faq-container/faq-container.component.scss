@@ -1,4 +1,12 @@
+:host{
+    padding:70px 0px
+}
 h2{
     font-size:50px;
     font-family:'NFSans_Medium'
+}
+@media screen and (max-width:990px){
+    h2{
+        font-size:40px
+    }
 }
