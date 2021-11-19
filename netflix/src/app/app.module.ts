@@ -16,6 +16,7 @@ import { ServicesComponent } from './home/services/services.component';
 import { ServicesSingleComponent } from './home/services-single/services-single.component';
 import { EmailFormComponent } from './home/email-form/email-form.component';
 import { FooterComponent } from './shared/components/footer/footer.component';
+import { AppContainerComponent } from './components/app-container/app-container.component';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { FooterComponent } from './shared/components/footer/footer.component';
     ServicesComponent,
     ServicesSingleComponent,
     EmailFormComponent,
-    FooterComponent
+    FooterComponent,
+    AppContainerComponent
   ],
   imports: [
     BrowserModule,
