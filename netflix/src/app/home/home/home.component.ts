@@ -6,7 +6,6 @@ import { NFService, NFServices } from 'src/assets/NetflixServices';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  showActions: boolean = true;
   constructor() { }
   NFServiceList = NFServices;
   ngOnInit(): void {

@@ -1,1 +1,1 @@
-<netflix-services-single class="col-12 d-flex justify-content-center" *ngFor="let service of NFServiceList" [service]="service" [index]="NFServiceList.indexOf(service)"></netflix-services-single>
+<netflix-services-single class="col-12 d-flex justify-content-center" *ngFor="let service of NFServiceList; let i = index" [service]="service" [index]="i"></netflix-services-single>
