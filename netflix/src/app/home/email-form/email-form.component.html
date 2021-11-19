@@ -1,0 +1,13 @@
+<div class="d-flex flex-column justify-content-center align-items-center">
+    <h5 class="display-6 text-light mb-4">Vuoi guardare Netflix? Inserisci l'indirizzo email per abbonarti o riattivare il tuo abbonamento.</h5>
+    <form #emailForm="ngForm" (submit)="submitForm(emailForm)">
+        <div class="email-form-container d-flex align-items-center">
+            <label placeholder="email" class="m-0 p-0" [class.alert]="emailField.touched">
+                <input type="email" name="email" id="email" placeholder="Indirizzo email" class="p-2" required ngModel #emailField="ngModel" email="true"><label for="email" [class.labelUp]="emailField.value != ''">Indirizzo email</label>
+            </label>
+            <button type="submit" class="btn px-4">Inizia ></button>
+        </div>
+        <p *ngIf="emailField.touched && emailForm.pristine" class="position-absolute text-warning">L'indirizzo email è obbligatorio</p>
+        <p *ngIf="emailForm.dirty && emailForm.invalid" class="position-absolute text-warning">Inserisci un indirizzo valido</p>
+    </form>
+</div>

@@ -69,7 +69,7 @@ export const NFServices: NFService[] = [
         graphic: {
             img: {
                 imgUrl: "https://occ-0-2725-2582.1.nflxso.net/dnm/api/v6/19OhWN2dO19C9txTON9tvTFtefw/AAAABbh8I7sjWYNz2f8_bqyLdqQqR5AfT7VDHCKvURfq4-D-a7r0fnLYR01-_teQH4fX1NctSxg5EVZ_cX0tjuzKbmdUvLab.png?r=dda",
-                style: ""
+                style: "position:relative;max-width:100%"
             }
         }
     }

@@ -11,3 +11,9 @@
         filter:invert(1)
     }
 }
+@media screen and (max-width: 576px){
+    .btn{
+        font-size:14.4px;
+        padding:4px 8px
+    }
+}

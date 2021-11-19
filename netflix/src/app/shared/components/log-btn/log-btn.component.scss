@@ -1,8 +1,15 @@
 @import '../../utilities/variables';
+
 .btn{
     background-color: $netflixRed;
     color:white;
     font-size:16px;
     padding:4px 16px;
     border-radius:2px
+}
+@media screen and (max-width: 576px){
+    .btn{
+        font-size:14.4px;
+        padding:4px 8px
+    }
 }

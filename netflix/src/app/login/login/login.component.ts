@@ -6,7 +6,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-  showActions: boolean = false;
   constructor() { }
 
   ngOnInit(): void {

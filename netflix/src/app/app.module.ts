@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home/home.component';
@@ -14,6 +14,9 @@ import { FaqSingleComponent } from './home/faq-single/faq-single.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ServicesComponent } from './home/services/services.component';
 import { ServicesSingleComponent } from './home/services-single/services-single.component';
+import { EmailFormComponent } from './home/email-form/email-form.component';
+import { FooterComponent } from './shared/components/footer/footer.component';
+
 
 @NgModule({
   declarations: [
@@ -26,11 +29,14 @@ import { ServicesSingleComponent } from './home/services-single/services-single.
     FaqContainerComponent,
     FaqSingleComponent,
     ServicesComponent,
-    ServicesSingleComponent
+    ServicesSingleComponent,
+    EmailFormComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
     NgbModule,
     BrowserAnimationsModule
   ],
