@@ -1,9 +1,14 @@
-<div class="container-fluid d-flex flex-column align-items-center justify-content-center py-5">
+<div class="container-fluid d-flex flex-column align-items-center justify-content-center py-5" [class.opaque]="route == '/login'">
     <div class="col-7 d-flex flex-column">
         <p class="my-2">Domande? Chiama <a href="tel:800-130-364">800-130-364</a></p>
         
         <ul class="container-fluid d-flex flex-wrap justify-content-between my-3">
-            <li *ngFor="let link of footerLinks" class="col-3 p-0 my-2"><a>{{link}}</a></li> 
+            <ng-container *ngIf="route == '/home'">
+                <li *ngFor="let link of links[0].links" class="col-3 p-0 my-2"><a>{{link}}</a></li> 
+            </ng-container>
+            <ng-container>
+                <li *ngFor="let link of links[1].links" class="col-3 p-0 my-2"><a>{{link}}</a></li> 
+            </ng-container>
         </ul>
         <netflix-lang class="my-2"></netflix-lang>
         <p class="my-2">Netflix Italia</p>

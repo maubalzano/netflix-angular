@@ -6,7 +6,8 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit {
-  @Input() showActions!: boolean;
+  @Input() route!: string
+
   constructor() { }
 
   ngOnInit(): void {

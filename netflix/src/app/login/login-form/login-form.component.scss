@@ -1,0 +1,26 @@
+@import '../../shared/utilities/variables';
+
+form{
+    margin:100px 0px;
+    background-color:rgba(0,0,0,0.7);
+    min-height:550px;
+    max-width:320px;
+    box-sizing:content-box;
+    input{
+        background-color:#333;
+        border:none;
+        height:50px;
+    }
+    .error{
+    border-bottom:solid 2px darkorange
+    }
+    .text-error{
+        color:darkorange;
+        line-height:1em
+    }
+    button[type='submit'], button:disabled{
+        background-color: $netflixRed;
+        opacity: 1
+    };
+
+}

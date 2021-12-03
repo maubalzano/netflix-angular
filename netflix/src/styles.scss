@@ -13,6 +13,10 @@ $enable-responsive-font-sizes : true;
     font-family: 'NFSans_Medium';
     src: url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Md.woff2);
 }
+@font-face {
+    font-family: 'NFSans_Light';
+    src: url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Th.woff);
+}
 *{
    box-sizing: border-box;
   -webkit-font-smoothing:antialiased;

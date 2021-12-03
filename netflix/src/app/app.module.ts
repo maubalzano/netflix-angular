@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home/home.component';
@@ -17,6 +17,12 @@ import { ServicesSingleComponent } from './home/services-single/services-single.
 import { EmailFormComponent } from './home/email-form/email-form.component';
 import { FooterComponent } from './shared/components/footer/footer.component';
 import { AppContainerComponent } from './components/app-container/app-container.component';
+import { InvalidUrlPageComponent } from './invalid-url-page/invalid-url-page.component';
+import { LoginFormComponent } from './login/login-form/login-form.component';
+import { UsersComponent } from './users/users-list/users.component';
+import { AddProfileComponent } from './users/add-profile/add-profile.component';
+import { UsersContainerComponent } from './users/users-container/users-container.component';
+import { EditProfileComponent } from './users/edit-profile/edit-profile.component';
 
 
 @NgModule({
@@ -33,14 +39,21 @@ import { AppContainerComponent } from './components/app-container/app-container.
     ServicesSingleComponent,
     EmailFormComponent,
     FooterComponent,
-    AppContainerComponent
+    AppContainerComponent,
+    InvalidUrlPageComponent,
+    LoginFormComponent,
+    UsersComponent,
+    AddProfileComponent,
+    UsersContainerComponent,
+    EditProfileComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     NgbModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

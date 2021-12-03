@@ -1,23 +1,8 @@
 <div class="container-fluid p-0 d-flex flex-column align-items-center">
-  <form class="bg-dark opacity-25 p-5">
-      <h2 class="text-white font-weight-bold">Accedi</h2>
-      <div class="mb-3">
-        <input type="email" class="form-control bg-secondary text-white-50 placeholder-custom" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email o numero di telefono">
-      </div>
-      <div class="mb-3">
-        <input type="password" class="form-control bg-secondary text-white-50 placeholder-custom" id="exampleInputPassword1" placeholder="Password">
-      </div>
-      <div class="mb-3 form-check">
-        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-        <label class="form-check-label text-muted" for="exampleCheck1">Ricordami</label>
-      </div>
-      <div class="py-2">
-      <img class="icon-facebook " src="https://assets.nflxext.com/ffe/siteui/login/images/FB-f-Logo__blue_57.png" width="25px">
-      <span class="fbBtnTex p-2 text-muted ">Accedi con Facebook</span>
-      </div>
-      <button type="submit" class="btn btn-danger w-100 mt-4 ">Accedi</button>
-      <p class="text-muted mt-2">Prima volta su Netflix? <a href="#" class="text-white">Registrati</a></p>
-      <small class="text-muted">Questa pagina è protetta da Google reCAPTCHA per <br> che tu non sia un bot. <a href="#"> Scopri di più.</a></small>
-    </form>
+  <div class="login-container d-flex flex-column justify-content-center align-items-center">
+    <netflix-login-form (fakeLogIn)="fakeLogIn($event)"></netflix-login-form>
+  </div>
+  
+  
 </div>
 

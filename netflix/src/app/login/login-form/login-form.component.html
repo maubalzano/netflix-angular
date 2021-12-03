@@ -1,0 +1,28 @@
+<form class="p-5 rounded" [formGroup]="credentials" (ngSubmit)="logIn()">
+    <h2 class="text-white font-weight-bold mb-4">Accedi</h2>
+    <div class="my-3">
+      <input formControlName="emailNumber" [class.error]="emailNumber.touched && emailNumber.invalid" class="form-control text-light placeholder-custom p-4 my-1" placeholder="Email o numero di telefono">
+      <p *ngIf="emailNumber.touched && emailNumber.invalid && isNumber === true" class="text-error"><small>Inserisci un numero di telefono valido.</small></p>
+      <p *ngIf="emailNumber.touched && emailNumber.invalid && isNumber === false" class="text-error"><small>Inserisci un indirizzo email valido.</small></p>
+      <p *ngIf="emailNumber.touched && emailNumber.invalid && isNumber === undefined" class="text-error"><small>Inserisci un indirizzo email o numero di telefono valido.</small></p>
+    </div>
+    <div class="mb-3">
+      <input formControlName="password" [class.error]="password.touched && password.invalid" type="password" class="form-control text-light placeholder-custom p-4 my-1" id="exampleInputPassword1" placeholder="Password">
+      <p *ngIf="password.touched && password.invalid" class="text-error"><small>La password deve avere una lunghezza compresa tra 4 e 60 caratteri.</small></p>
+    </div>
+    <button [disabled]="credentials.invalid" type="submit" class="btn btn-danger w-100 mt-4 p-2">Accedi</button>
+    <div class="w-100 d-flex justify-content-between align-items-center mt-2 mb-4 text-muted">
+        <div class="mb-3 form-check d-flex align-items-center">
+          <input type="checkbox" checked class="form-check-input" id="exampleCheck1">
+          <label class="form-check-label text-muted" for="exampleCheck1"><small>Ricordami</small></label>
+        </div>
+        <p><small>Serve aiuto?</small></p>
+
+    </div>
+    <div class="py-2">
+        <img class="icon-facebook " src="https://assets.nflxext.com/ffe/siteui/login/images/FB-f-Logo__blue_57.png" width="18px">
+        <span class="fbBtnTex p-2 text-secondary"><small>Accedi con Facebook</small></span>
+    </div>
+    <p class="text-muted mt-2">Prima volta su Netflix? <a href="#" class="text-white">Registrati</a></p>
+    <small class="text-muted">Questa pagina è protetta da Google reCAPTCHA per garantire che tu non sia un bot. <a href="#"> Scopri di più.</a></small>
+  </form>

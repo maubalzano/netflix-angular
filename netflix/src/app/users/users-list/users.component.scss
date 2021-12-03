@@ -1,0 +1,42 @@
+
+.gray{
+    filter:invert(.3);
+    &:hover{
+        background-color:#f1f1f1
+    }
+}
+.user-btn{
+    border:solid 2px transparent;
+    &:hover{
+        border:solid 2px white
+    }
+}
+.btn-profiles{
+    background-color:transparent;
+    border:solid 1px gray;
+    color:gray;
+    &:hover{
+        border:solid 1px darkgray;
+        color:darkgray
+    }
+}
+button{
+    background-color:transparent;
+    border:none
+}
+.btn-done{
+    background-color:white;
+    color:black;
+    border-radius:1px;
+    border:none;
+    opacity:.9;
+    &:hover{
+        opacity:1
+    };
+    &:disabled:hover{
+        opacity:.9
+    }
+}
+.edit-icon{
+    position:absolute
+}

@@ -1,8 +1,11 @@
 :host, a{
-    color:gray
+    color:gray;
 }
 ul{
     list-style:none;
     padding-left:0;
     font-size:13px
+}
+.opaque{
+    background-color: rgba(0,0,0,.5);
 }

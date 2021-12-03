@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { footerLink } from 'src/app/models/footerLink';
+import { footerLinks } from 'src/assets/FooterLinks';
 
 @Component({
   selector: 'netflix-footer',
@@ -6,10 +8,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./footer.component.scss']
 })
 export class FooterComponent implements OnInit {
-  footerLinks: string[] = ["Domande frequenti","Centro assistenza","Account","Media Center","Rapporti con gli investitori","Opportunità di lavoro","Riscatta carte regalo","Acquista carte regalo","Come guardare Netflix","Condizioni di utilizzo","Privacy","Preferenze per i cookie","Informazioni sull'azienda","Contattaci","Test di velocità","Note legali","Solo su Netflix"]
+  @Input() route!: string;
+  links: footerLink[] = footerLinks;
+
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit(): void {  
   }
 
 }

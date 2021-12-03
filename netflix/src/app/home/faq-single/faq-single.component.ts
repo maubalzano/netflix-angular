@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Faq } from 'src/app/models/Faq';
-import { trigger, state, style, animate, transition } from '@angular/animations';
+import { trigger, style, animate, transition } from '@angular/animations';
 
 @Component({
   selector: 'netflix-faq-single',

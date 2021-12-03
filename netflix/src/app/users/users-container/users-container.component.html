@@ -1,0 +1,5 @@
+<div class="d-flex container-fluid flex-column justify-content-center align-items-center users-container m-0 p-0 text-light">
+    <netflix-users *ngIf="!showAddUser" [users]="users" (newUser)="showAddUser = true" (showEditProfile)="showEditProfile($event)" [canEdit]="canEdit" [@onOpen]></netflix-users>
+    <netflix-add-profile *ngIf="showAddUser" class="w-50" (onAddUser)="addUser($event)" (onCancel)="showAddUser = false" [@onOpen]></netflix-add-profile>
+    <netflix-edit-profile *ngIf="showEditUser" [user]="profileToEdit"></netflix-edit-profile>
+</div>
