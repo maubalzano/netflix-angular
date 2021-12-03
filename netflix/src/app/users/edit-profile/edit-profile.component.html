@@ -1,1 +1,53 @@
-<p>edit-profile works!</p>
+
+    <div class="d-flex flex-column">
+        <h1 class="display-4 mb-3">Modifica il profilo</h1>
+        <form [formGroup]="editUserForm" (ngSubmit)="edit()">
+            <div class="border-top border-bottom border-dark py-4 d-flex justify-content-start align-items-start">
+                <img class="rounded my-1 me-2" [src]="user?.imgUrl">
+                <div class="mx-4">
+                    <div class="d-flex w-100 border-bottom border-dark py-2">
+                        <div>
+                            <input formControlName="name" type="text" class="p-2 w-100 mb-3" placeholder="Nome">
+                            <p class="mb-1">Lingua:</p>
+                            <select class="mb-3" formControlName="language">
+                                <option *ngFor="let lang of langs" [value]="lang">{{lang}}</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="w-100 border-bottom border-dark py-3">
+                        <div class="d-flex flex-column align-items-start">
+                            <h5>Classificazione per età:</h5>
+                            <p class="w-auto maturity-rating px-3 py-1 my-2"><small>{{!user?.isKid ? "Tutte le fasce d'età" : "Minori di 10 anni"}}</small></p>
+                            <p><small>Mostra titoli con classificazione per {{!user?.isKid ? "tutte le fasce d'età" : "minori di 10 anni"}} per questo profilo</small></p>
+                            <a class="btn-cancel px-3 py-1 my-3"><small>Modifica</small></a>
+                        </div>
+                    </div>
+                    <div>
+                        <h5 class="text-white-75 my-2">Riproduzione automatica</h5>
+                        <label for="autoPlayNext" class="d-flex align-items-center">
+                            <div class="custom-checkbox">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 12">
+                                    <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+                                </svg>
+                            </div>
+                            <input formControlName="autoplayNext" id="autoPlayNext" type="checkbox" class="invisible"><p class="my-0"><small>Riproduci automaticamente l'episodio successivo di una serie su tutti i dispositivi.</small></p>
+                        </label>
+                        <label for="autoPlayPreview"class="d-flex align-items-center">
+                            <div class="custom-checkbox">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 12">
+                                    <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+                                </svg>
+                            </div>
+                            <input formControlName="autoplayPreview" id="autoPlayPreview" type="checkbox" class="invisible"><p class="my-0"><small>Riproduci automaticamente le anteprime mentre sfogli su tutti i dispositivi.</small></p>
+                        </label>        
+                    </div>
+
+                </div>
+            </div>
+            <div class="d-flex my-4 buttons">
+                <button type="submit" [disabled]="editUserForm.invalid" class="btn-continue px-4 py-1"><b>Salva</b></button>
+                <button type="button" (click)="onCancel.emit()" class="btn-cancel px-4 py-1 mx-3">Annulla</button>
+            </div>
+        </form>
+        
+    </div>

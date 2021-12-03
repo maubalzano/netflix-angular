@@ -25,13 +25,11 @@ export class AddProfileComponent implements OnInit {
       name: this.newUserForm.get('name')!.value,
       isKid: this.newUserForm.get('isKid')!.value,
       imgUrl: this.newUserForm.get('imgUrl')!.value,
+      autoplayNext: true,
+      autoplayPreview: true,
+      language: 'italian'
     }
     this.newUserForm.valid && this.onAddUser.emit(newUser)
-  }
-
-  cancel(){
-
-    this.onCancel.emit()
   }
 
   ngOnInit(): void {
