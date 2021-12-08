@@ -40,6 +40,11 @@ export class UsersContainerComponent implements OnInit, OnDestroy {
     this.showAddUser = false;
   }
 
+  editUser(user: User){
+    this.userService.editUser(user);
+    this.showEditUser = false
+  }
+
   showEditProfile(user: User){
     this.profileToEdit = user;
     console.log(user);

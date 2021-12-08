@@ -17,7 +17,7 @@ form{
         border:solid 1px #555;
         position:relative;
         & > svg{
-            color:#555;
+            color:rgb(213, 213, 213);
             width:100%;
         }
     }
@@ -44,4 +44,10 @@ form{
     &:hover{
         opacity:9
     }
+}
+.custom-select{
+    background-color:black;
+    border-radius:0px;
+    color:white;
+    font-weight:bold
 }

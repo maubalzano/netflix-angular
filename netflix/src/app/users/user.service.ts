@@ -12,8 +12,8 @@ export class UserService {
   private _localStorage!: Storage;
   
   private users!: User[];
+  
   private _users$ = new BehaviorSubject<User[]>(this.users);
-  // public users$ = this._users$.asObservable()
 
   get users$(){
     return this._users$.asObservable()
@@ -33,14 +33,24 @@ export class UserService {
 
    updateUsers(users: User[]){
     this._localStorage.setItem('profiles', JSON.stringify(users));
-    this.getUsers()
+    this.getUsers();
    }
 
   addUser(user: User){
+    const id: number = Math.max(...this.users.map(usr => usr.id)) + 1;
     const newUser: User = {
-      ...user
+      ...user,
+      id: id
     };
     const updatedUsers: User[] = [ ...this.users, newUser];
+    this.updateUsers(updatedUsers);
+    this.getUsers()
+  }
+
+  editUser(user: User){
+    const updatedUsers: User[] = [ ...this.users ];
+    const index = updatedUsers.findIndex(usr => usr.id == user.id);
+    updatedUsers[index] = { ...user };
     this.updateUsers(updatedUsers);
     this.getUsers()
   }

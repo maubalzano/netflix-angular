@@ -22,6 +22,7 @@ export class AddProfileComponent implements OnInit {
 
   onConfirm(){
     const newUser: User = {
+      id: 0,
       name: this.newUserForm.get('name')!.value,
       isKid: this.newUserForm.get('isKid')!.value,
       imgUrl: this.newUserForm.get('imgUrl')!.value,
