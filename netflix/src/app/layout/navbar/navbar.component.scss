@@ -1,0 +1,27 @@
+@import '../../shared/utilities/variables';
+
+@mixin flex($direction){
+    display:flex;
+    flex-direction:$direction;
+    align-items:flex-start;
+}
+
+:host{
+    @include flex(row);
+    width:100%;
+    padding:25px 50px;
+    justify-content:space-between;
+    z-index:2;
+    svg{
+        width:167px;
+        fill: $netflixRed;
+    }
+    div{
+        @include flex(row);
+        gap:20px;
+
+        button{
+            background-color: $netflixRed;
+        }
+    }
+}

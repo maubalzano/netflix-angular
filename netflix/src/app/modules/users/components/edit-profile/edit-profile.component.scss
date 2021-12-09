@@ -1,0 +1,53 @@
+form{
+    img{
+        width:16%
+    }
+    input[type="text"]{
+        background-color: #444;
+        color:white;
+        border:none
+    }
+    .maturity-rating{
+        background-color:#333;
+        width:auto
+    }
+    .custom-checkbox{
+        width:28px;
+        height:28px;
+        border:solid 1px #555;
+        position:relative;
+        & > svg{
+            color:rgb(213, 213, 213);
+            width:100%;
+        }
+    }
+}
+.btn-continue{
+    background-color:white;
+    color:black;
+    border-radius:1px;
+    border:none;
+    opacity:.9;
+    &:hover{
+        opacity:1
+    };
+    &:disabled:hover{
+        opacity:.9
+    }
+}
+.btn-cancel{
+    background-color:transparent;
+    color:white;
+    border-radius:1px;
+    border:solid 1px white;
+    opacity:.6;
+    &:hover{
+        opacity:9
+    }
+}
+.custom-select{
+    background-color:black;
+    border-radius:0px;
+    color:white;
+    font-weight:bold
+}
