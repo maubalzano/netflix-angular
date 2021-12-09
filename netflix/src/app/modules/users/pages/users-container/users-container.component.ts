@@ -1,6 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { User } from 'src/app/models/user';
-import { UserService } from '../user.service';
+import { UserService } from '../../user.service';
 import { trigger, style, animate, transition } from '@angular/animations';
 import { Subscription } from 'rxjs';
 
@@ -49,6 +49,10 @@ export class UsersContainerComponent implements OnInit, OnDestroy {
     this.profileToEdit = user;
     console.log(user);
     this.showEditUser = true
+  }
+
+  navigateToBrowser(user: User){
+    this.userService.navigateToBrowse(user)
   }
 
   ngOnInit(): void {

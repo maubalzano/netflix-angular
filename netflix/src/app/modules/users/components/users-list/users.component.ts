@@ -12,13 +12,21 @@ export class UsersComponent implements OnInit {
   @Input() canEdit!: boolean;
   @Output() newUser = new EventEmitter();
   @Output() showEditProfile = new EventEmitter<User>();
+  @Output() navigateToBrowser = new EventEmitter<User>();
 
   profileToEdit?: User;
   showEditForm = false;
 
   constructor() { }
 
-  ngOnInit(): void {
+  onClick(user: User){
+    if (this.canEdit) {
+      this.showEditProfile.emit(user)
+    } else {
+      this.navigateToBrowser.emit(user)
+    }
   }
 
+  ngOnInit(): void {
+  }
 }

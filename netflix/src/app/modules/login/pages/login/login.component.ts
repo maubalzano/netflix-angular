@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Credentials } from 'src/app/models/credentials';
-import { LogInService } from '../log-in.service';
+import { LogInService } from '../../log-in.service';
 
 @Component({
   selector: 'netflix-login',
