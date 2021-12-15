@@ -1,6 +1,6 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { User } from 'src/app/models/user';
+import { User } from 'src/app/shared/models/user';
 
 @Component({
   selector: 'netflix-add-profile',

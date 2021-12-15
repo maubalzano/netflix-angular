@@ -5,7 +5,6 @@ import { AddProfileComponent } from './components/add-profile/add-profile.compon
 import { EditProfileComponent } from './components/edit-profile/edit-profile.component';
 import { UsersContainerComponent } from './pages/users-container/users-container.component';
 import { UsersComponent } from './components/users-list/users.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ReactiveFormsModule } from '@angular/forms';
 
 

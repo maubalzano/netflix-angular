@@ -1,6 +1,6 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormGroup, FormControl, Validators, AbstractControl } from '@angular/forms';
-import { Credentials } from 'src/app/models/credentials';
+import { Credentials } from 'src/app/shared/models/credentials';
 
 @Component({
   selector: 'netflix-login-form',
