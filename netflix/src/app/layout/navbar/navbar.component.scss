@@ -12,16 +12,37 @@
     padding:25px 50px;
     justify-content:space-between;
     z-index:2;
-    svg{
+    .svg-icon-netflix-logo{
         width:167px;
         fill: $netflixRed;
     }
-    div{
+    div:not(.menu-dropdown){
         @include flex(row);
-        gap:20px;
+        
 
         button{
             background-color: $netflixRed;
         }
+    };
+    .dropdown-hover svg{
+        transition:.3s
+    }
+    .menu-dropdown-container{
+        position:absolute;
+        width:170px;
+        top:100%;
+        right:0;
+        .menu-dropdown{
+            background-color:black;
+            width:100%;
+            gap:0px;
+            grid-gap:0px
+        
+        }
     }
 }
+.browse-routes a{
+    opacity:.8;
+    font-size:1vw
+}
+

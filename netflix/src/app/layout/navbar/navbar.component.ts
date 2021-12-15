@@ -1,4 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { User } from 'src/app/shared/models/user';
 
 @Component({
   selector: 'netflix-navbar',
@@ -6,7 +8,12 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit {
+  
   @Input() route!: string
+  @Input() users$!: Observable<User[]>;
+  @Input() currentUser$!: Observable<number>;
+
+  showUsersMenu = false;
 
   constructor() { }
 

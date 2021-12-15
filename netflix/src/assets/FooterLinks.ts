@@ -1,4 +1,4 @@
-import { footerLink } from "src/app/models/footerLink";
+import { footerLink } from "src/app/shared/models/footerLink";
 
 export const footerLinks: footerLink[] = [
     {

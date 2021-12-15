@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Credentials } from 'src/app/models/credentials';
+import { Credentials } from 'src/app/shared/models/credentials';
 import { LogInService } from '../../log-in.service';
 
 @Component({

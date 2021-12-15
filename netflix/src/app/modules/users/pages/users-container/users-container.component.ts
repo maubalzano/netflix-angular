@@ -1,8 +1,12 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { User } from 'src/app/models/user';
-import { UserService } from '../../user.service';
+import { User } from 'src/app/shared/models/user';
 import { trigger, style, animate, transition } from '@angular/animations';
 import { Subscription } from 'rxjs';
+import { Store } from '@ngrx/store';
+import { userState } from 'src/app/state/user/user.state';
+import { addUser, editUser, setCurrentUser } from 'src/app/state/user/user.actions';
+import { getUsers } from 'src/app/state/user/user.selectors';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'netflix-users-container',
@@ -33,30 +37,33 @@ export class UsersContainerComponent implements OnInit, OnDestroy {
   public profileToEdit?: User;
   private usersSubscription!: Subscription;
 
-  constructor(private userService: UserService) { }
+  constructor( 
+      private store: Store<{users: userState}>,
+      private router: Router
+    ) { }
 
   addUser(user: User){
-    this.userService.addUser(user);
+    this.store.dispatch(addUser({value: user}));
     this.showAddUser = false;
   }
 
   editUser(user: User){
-    this.userService.editUser(user);
+    this.store.dispatch(editUser({value: user}));
     this.showEditUser = false
   }
 
   showEditProfile(user: User){
     this.profileToEdit = user;
-    console.log(user);
     this.showEditUser = true
   }
 
   navigateToBrowser(user: User){
-    this.userService.navigateToBrowse(user)
+    this.store.dispatch(setCurrentUser({value: user.id}));
+    this.router.navigate(['browse'])
   }
 
   ngOnInit(): void {
-    this.usersSubscription = this.userService.users$.subscribe(users => this.users = users) 
+    this.usersSubscription = this.store.select(getUsers).subscribe(users => this.users = users) 
   }
 
   ngOnDestroy(): void {

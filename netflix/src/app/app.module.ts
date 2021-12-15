@@ -10,7 +10,12 @@ import { FooterComponent } from './layout/footer/footer.component';
 import { AppContainerComponent } from './components/app-container/app-container.component';
 import { InvalidUrlPageComponent } from './components/invalid-url-page/invalid-url-page.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import { StoreModule } from '@ngrx/store';
+import { userReducer } from './state/user/user.reducer';
+import { HttpClientModule } from '@angular/common/http';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { EffectsModule } from '@ngrx/effects';
+import { UserEffects } from './state/user/user.effects';
 
 @NgModule({
   declarations: [
@@ -25,8 +30,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    HttpClientModule,
     AppRoutingModule,
     NgbModule,
+    StoreModule.forRoot({user: userReducer}),
+    StoreDevtoolsModule.instrument({
+      maxAge: 20
+    }),
+    EffectsModule.forRoot([UserEffects])
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,4 +1,4 @@
-import { Faq } from "src/app/models/Faq";
+import { Faq } from "src/app/shared/models/Faq";
 export const FAQLIST: Faq[] = [
     {
       question: "Cos'è Netflix?",
