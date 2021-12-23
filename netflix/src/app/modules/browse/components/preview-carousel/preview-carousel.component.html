@@ -1,0 +1,20 @@
+<ng-container *ngIf="(list$ | async) as list">
+
+    <h5 class="px-4 text-light">I più popolari su Netflix</h5>
+    <mat-carousel
+    [autoplay]=false
+    [timings]="'550ms ease-out'"
+    [hideArrows]="!carouselArrows"
+    (mouseenter)="carouselArrows = true"
+    (mouseleave)="carouselArrows = false"
+    [proportion]=13
+    class="carous">
+        <mat-carousel-slide *ngFor="let quintet of list" class="slide pl-2" overlayColor="#00000000" >
+            <div class="d-flex align-items-center h-100 pl-4">
+                <div *ngFor="let preview of quintet" width="20vw" class="mr-1 rounded position-relative preview-container">
+                    <netflix-preview-card [preview]="preview" (getProductDetails)="getProductDetails.emit({id: preview.id, type: preview.type})" [info]="info[preview.id]"></netflix-preview-card>
+                </div>
+            </div>
+        </mat-carousel-slide>
+    </mat-carousel>
+</ng-container>

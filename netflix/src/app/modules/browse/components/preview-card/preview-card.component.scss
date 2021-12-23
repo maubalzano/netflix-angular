@@ -1,0 +1,24 @@
+.preview-img{
+    z-index:0
+}
+.preview-title{
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:1;
+    text-shadow:0px 0px 3px black
+}
+.genre:not(:last-child){
+    margin-right: 12px;
+    display:inline;
+    width:auto;
+    &:after{
+        content:'·';
+        margin-left:5px;
+        position:absolute
+    }
+}
+.adult{
+    border:solid 1px white;
+    padding:4px
+}

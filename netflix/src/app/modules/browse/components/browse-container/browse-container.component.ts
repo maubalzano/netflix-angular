@@ -21,9 +21,10 @@ export class BrowseContainerComponent implements OnInit {
     private catalogue: CatalogueService
     ) { }
 
+
+
   ngOnInit(): void {
-    this.store.select(getUsers).subscribe(users => this.users = users);
-    this.store.select(getCurrentUser).subscribe(currentUser => this.currentUser = currentUser);
+
   }
 
 }

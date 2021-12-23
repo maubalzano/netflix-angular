@@ -1,11 +1,22 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { BrowseContainerComponent } from './pages/browse-container/browse-container.component';
+
+import { BrowseHomeComponent } from './pages/browse-home/browse-home.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: BrowseContainerComponent
+    children: [
+      {
+        path: '',
+        redirectTo: 'home',
+        pathMatch: 'full'
+      },
+      {
+        path: 'home',
+        component: BrowseHomeComponent
+      }
+    ]
   }
 ];
 
