@@ -1,4 +1,4 @@
-<div (mouseenter)="getDetails()" (mouseleave)="scale=false" *ngIf="preview">
+<div (mouseenter)="getDetails()" (mouseleave)="scale=false" #card>
     <div class="container-fluid m-0 p-0">
         <img src="https://image.tmdb.org/t/p/w500/{{preview.backdrop_path}}" class="img-fluid preview-img">
         <h5 class="col-6 preview-title p-3 text-light">{{preview.name}}</h5>
@@ -33,3 +33,4 @@
         </div>
 
 </div>
+

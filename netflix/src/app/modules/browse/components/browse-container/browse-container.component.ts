@@ -2,8 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import { User } from 'src/app/shared/models/user';
-import { getCurrentUser, getUsers } from 'src/app/state/user/user.selectors';
-import { userState } from 'src/app/state/user/user.state';
+import { SharedState } from 'src/app/state/shared.state';
 import { CatalogueService } from '../../services/catalogue.service';
 
 @Component({
@@ -17,7 +16,7 @@ export class BrowseContainerComponent implements OnInit {
   public users!: User[];
 
   constructor(
-    private store: Store<{user: userState}>,
+    private store: Store<SharedState>,
     private catalogue: CatalogueService
     ) { }
 

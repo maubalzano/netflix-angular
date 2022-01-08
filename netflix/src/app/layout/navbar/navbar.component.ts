@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Observable } from 'rxjs';
 import { User } from 'src/app/shared/models/user';
 
@@ -9,6 +9,8 @@ import { User } from 'src/app/shared/models/user';
 })
 export class NavbarComponent implements OnInit {
   
+  @Output() search = new EventEmitter<string>();
+  @Output() navigateHome = new EventEmitter();
   @Input() route!: string
   @Input() users$!: Observable<User[]>;
   @Input() currentUser$!: Observable<number>;

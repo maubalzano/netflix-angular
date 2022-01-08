@@ -16,6 +16,7 @@ import { previewsState } from './store/previews/state.previews';
 import { infoReducer, InfoState } from './store/info/reducer.info';
 import { infoEffects } from './store/info/effects.info';
 import { MinutesToHoursPipe } from 'src/app/shared/pipes/minutes-to-hours.pipe';
+import { SearchComponent } from './pages/search/search.component';
 
 export interface BrowseState {
   previews: previewsState,
@@ -33,7 +34,8 @@ const reducers: ActionReducerMap<BrowseState> = {
     PreviewCarouselComponent,
     PreviewCardComponent,
     PreviewsContainerComponent,
-    MinutesToHoursPipe
+    MinutesToHoursPipe,
+    SearchComponent
   ],
   imports: [
     CommonModule,

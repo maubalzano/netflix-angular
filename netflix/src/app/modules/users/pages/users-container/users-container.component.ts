@@ -3,10 +3,10 @@ import { User } from 'src/app/shared/models/user';
 import { trigger, style, animate, transition } from '@angular/animations';
 import { Subscription } from 'rxjs';
 import { Store } from '@ngrx/store';
-import { userState } from 'src/app/state/user/user.state';
 import { addUser, editUser, setCurrentUser } from 'src/app/state/user/user.actions';
-import { getUsers } from 'src/app/state/user/user.selectors';
 import { Router } from '@angular/router';
+import { getUsers } from 'src/app/state/shared.selectors';
+import { SharedState } from 'src/app/state/shared.state';
 
 @Component({
   selector: 'netflix-users-container',
@@ -38,7 +38,7 @@ export class UsersContainerComponent implements OnInit, OnDestroy {
   private usersSubscription!: Subscription;
 
   constructor( 
-      private store: Store<{users: userState}>,
+      private store: Store<SharedState>,
       private router: Router
     ) { }
 

@@ -43,6 +43,11 @@
 }
 .browse-routes a{
     opacity:.8;
-    font-size:1vw
+    font-size:1vw;
+    text-decoration:none;
+    transition:.3s;
+    &.active{
+        opacity:1
+    }
 }
 

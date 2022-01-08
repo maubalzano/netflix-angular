@@ -1,5 +1,6 @@
 .hero{
-    
+    position:relative;
+    top:0;
     // background-image:url('https://occ-0-2725-2582.1.nflxso.net/dnm/api/v6/6AYY37jfdO6hpXcMjf9Yu5cnmO0/AAAABWeHwWyz-KJovBrZybB4NUcY9ZjM0V6unPDO_pUD-rbO6ZcDx8bXST1lPcLZPcrv_fdRYCIc_IHsHNkRRzQJoZYB78s1.webp?r=5d9')
     .shade{
         
@@ -14,14 +15,16 @@
         position:absolute
     }
     .on-poster-container{
-        position:absolute;
+        position:relative;
+        padding-top:80px;
+    
         width:100%;
         background-image:radial-gradient(rgba(0,0,0,0) 40%, rgba(0,0,0,.5)), linear-gradient(90deg, rgba(0, 0, 0, 0.5), transparent);
     }
     .on-poster{
         position:relative;
         z-index:2;
-        margin-top:100px;
+        margin-top:0px;
         
         .poster-description{
             font-size:18px;
@@ -44,4 +47,7 @@
         }
 
     }
+}
+.prev-cont{
+    z-index:30
 }
