@@ -1,4 +1,4 @@
-<div class="position-relative previews-container">
+<div class="position-relative previews-container" style="z-index:5">
     <ng-container *ngIf="movies$">
         <div class="carousel-container">
             <netflix-preview-carousel [list$]="movies$" (getProductDetails)="getProductDetails($event)" [info]="info" ></netflix-preview-carousel>
@@ -9,5 +9,4 @@
             <netflix-preview-carousel [list$]="series$" (getProductDetails)="getProductDetails($event)" [info]="info" ></netflix-preview-carousel>
         </div>
     </ng-container>
-    <button (click)="getPops()" class="btn btn-primary">GET</button>
 </div>

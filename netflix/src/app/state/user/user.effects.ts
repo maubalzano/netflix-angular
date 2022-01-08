@@ -3,6 +3,7 @@ import { Actions, createEffect, ofType } from '@ngrx/effects'
 import { map, tap } from "rxjs/operators";
 import { User } from "src/app/shared/models/user";
 import { LocalStorageService } from "src/app/shared/services/local-storage.service";
+import { users as mockusers } from "src/assets/users";
 import { setCurrentUser, setCurrentUserSuccess, addUser, editUser, updateUsers } from "./user.actions";
 
 @Injectable()
@@ -19,7 +20,7 @@ export class UserEffects {
     addUser = createEffect(() => this.action$.pipe(
         ofType(addUser),
         map((action) => {
-            const users: User[] = JSON.parse(this.localStorageService.localStorage.getItem('profiles')!);
+            const users: User[] = JSON.parse(this.localStorageService.localStorage.getItem('profiles')!) || mockusers;
             const id: number = Math.max(...users.map(usr => usr.id)) + 1;
             const updatedUsers = [...users, { ...action.value, id: id }];
             this.localStorageService.localStorage.setItem('profiles', JSON.stringify(updatedUsers));

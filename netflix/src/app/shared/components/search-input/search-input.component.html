@@ -1,0 +1,5 @@
+
+<label for="search" class="search-input-container" [class.open]="toggleInput">
+    <a class="mx-2 text-white"><img (click)="toggleInput = !toggleInput" width="16px" style="filter:invert(1)" src="https://cdn-icons-png.flaticon.com/512/151/151773.png"></a>
+    <input id="search" type="text" class="search-input" placeholder="Titoli, persone, generi..." [formControl]="searchInput" (blur)="toggleInput = false">
+</label>

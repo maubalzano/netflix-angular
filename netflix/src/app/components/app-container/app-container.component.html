@@ -1,5 +1,5 @@
-<netflix-navbar [route]="route" [users$]="users$" [currentUser$]="currentUser$" class="py-4 px-3 px-md-5 position-absolute"></netflix-navbar>
-<div class="hero">
+<netflix-navbar [route]="route" [users$]="users$" [currentUser$]="currentUser$" class="py-4 px-3 px-md-5 nav" style="top:0" [ngStyle]="{'position': route.startsWith('/browse') ? 'fixed' : 'absolute'}" [class.bgBlack]="navbarBgBlack" (search)="search($event)" (navigateHome)="navigateHome()"></netflix-navbar>
+<div class="hero" >
     <router-outlet></router-outlet>
 </div>
 

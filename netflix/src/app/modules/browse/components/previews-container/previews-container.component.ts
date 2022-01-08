@@ -37,6 +37,7 @@ export class PreviewsContainerComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.getPops();
     this.movies$ = this.store.pipe(select(getPopularMovies));
     this.series$ = this.store.pipe(select(getPopularSeries))
     this.store.pipe(select(getProductInfo)).subscribe(info => this.info = info)
