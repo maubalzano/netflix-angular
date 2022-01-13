@@ -22,8 +22,8 @@
 
     </div>
     <div *ngIf="route=='/home'">
-        <netflix-lang></netflix-lang>
-        <netflix-log-btn></netflix-log-btn>
+        <netflix-lang class="mx-2"></netflix-lang>
+        <netflix-log-btn class="mx-2"></netflix-log-btn>
     </div>
     <div *ngIf="route.startsWith('/browse')" class="text-white d-flex align-items-center">
         <netflix-search-input (search)="search.emit($event)" (navigateHome)="navigateHome.emit()"></netflix-search-input>

@@ -1,3 +1,5 @@
+import { Product } from "./movie.model";
+
 export interface Genre {
     id: number;
     name: string;
@@ -53,10 +55,13 @@ export interface DetailResponse {
     status: string;
     tagline: string;
     title: string;
+    name: string;
     video: boolean;
     vote_average: number;
     vote_count: number;
-    seasons: Season[]
+    seasons: Season[];
+    type: string,
+    similars: Product[]
 }
 
 export interface indexedInfo {

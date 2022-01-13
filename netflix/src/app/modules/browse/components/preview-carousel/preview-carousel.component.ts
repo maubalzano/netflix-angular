@@ -12,7 +12,8 @@ export class PreviewCarouselComponent implements OnInit {
 
   @Input() list$!: Observable<Product[][]>; 
   @Input() info!: indexedInfo;
-  @Output() getProductDetails = new EventEmitter<{id: number, type: string}>();
+  @Output() getProductDetails = new EventEmitter<{productId: number, productType: string}>();
+  @Output() onOpenModal = new EventEmitter<{productId: number, productType: string}>();
 
   carouselArrows = false;
 

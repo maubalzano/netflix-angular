@@ -39,7 +39,7 @@ export const NFServices: NFService[] = [
             img: 
             {
                 imgUrl: "https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/mobile-0819.jpg",
-                style: "z-index:-1;position:relative;max-width:100%"
+                style: "position:relative;max-width:100%"
             },
             animationStyle: "padding:5px;border: 2px solid rgba(255,255,255,.25);border-radius: 0.75em;box-shadow: 0 0 2em 0 #000;position: absolute;left: 50%;bottom: 8%;background:#000;display: flex;flex-direction:row;align-items: center;width: 55%;min-width: 15em;transform: translateX(-50%)",
             animationHTML: `<img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/boxshot.png" width="58px"/><span class="p-3 d-flex flex-column"><div class="text-white">Stranger Things</div><div class="text-primary">Download in corso...</div></span><img width="48px"src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/download-icon.gif">`

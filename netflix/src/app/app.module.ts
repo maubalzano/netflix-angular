@@ -22,6 +22,7 @@ import { Product } from './shared/models/movie.model';
 import { SearchEffects } from './state/search/search.effects';
 import { SharedState } from './state/shared.state';
 import { sharedReducer } from './state/shared.reducer';
+import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
 
 
 
@@ -47,6 +48,7 @@ import { sharedReducer } from './state/shared.reducer';
     HttpClientModule,
     AppRoutingModule,
     NgbModule,
+    NgxSkeletonLoaderModule,
     StoreModule.forRoot({'shared': sharedReducer}),
     StoreDevtoolsModule.instrument({
       maxAge: 20
