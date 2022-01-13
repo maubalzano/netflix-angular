@@ -10,15 +10,12 @@
     <div class="container-fluid d-flex flex-wrap">
         <div *ngFor="let result of results" class="preview-row col-2 p-1 mb-5">
             <div class="rounded position-relative preview-container">
-                <netflix-preview-card *ngIf="result; else skeleton" 
+                <netflix-preview-card *ngIf="result" 
                     [preview]="result" 
         
                     class="position-relative"
                     (getProductDetails)="getProductDetails({productId: result.id, productType: result.type})" 
                     [info]="info[result.id]"></netflix-preview-card>
-                <ng-template #skeleton>
-                    <h2 class="text-light">skeleton</h2>
-                </ng-template>
             </div>
     
         </div>

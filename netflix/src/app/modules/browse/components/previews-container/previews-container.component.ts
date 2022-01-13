@@ -17,11 +17,11 @@ import { getPopularMovies, getPopularSeries } from '../../store/previews/selecto
 })
 export class PreviewsContainerComponent implements OnInit {
 
-  movies$!: Observable<Product[][]>;
-  series$!: Observable<Product[][]>;
-  info!: indexedInfo;
-  currentModalInfo$!: Observable<DetailResponse | undefined>;
-  showModal = false;
+  public movies$!: Observable<Product[][]>;
+  public series$!: Observable<Product[][]>;
+  public info!: indexedInfo;
+  public currentModalInfo$!: Observable<DetailResponse | undefined>;
+  public showModal = false;
 
   constructor(
     private store: Store

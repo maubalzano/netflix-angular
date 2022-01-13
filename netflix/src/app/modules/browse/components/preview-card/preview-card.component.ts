@@ -23,7 +23,6 @@ export class PreviewCardComponent implements OnInit, AfterViewInit{
 
   constructor() { }
 
-
   openModal(productId: number, productType: string){
     this.onOpenModal.emit({productId, productType})
   }
