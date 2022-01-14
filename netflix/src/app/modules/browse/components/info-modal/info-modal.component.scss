@@ -1,0 +1,57 @@
+
+.info-modal{
+    top:80px;
+    width: 900px;
+    border-radius:20px;
+    background-color:#111;
+    overflow:hidden;
+    position:relative;
+    .modal-background{
+        background-size: contain;
+        background-position:top;
+        background-repeat:no-repeat;
+        padding-top:320px;
+        .inner-modal-banner{
+            background-image:linear-gradient(transparent, #111)
+        };
+        .inner-modal{
+            background-color:#111;
+        }
+        .modal-details{
+            
+            padding-top:20px
+        }
+    };
+    
+    .close-btn{
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 2;
+        cursor: pointer;
+        margin: 1em;
+        background-color:black;
+        border-radius:30px;
+        padding: 8px;
+        svg{
+            &:focus{
+                border: none;
+                outline:none
+            }
+        }
+    }
+}
+.btn-play{
+    background-color:white;
+    border:none;
+    outline:none;
+    font-size:18px;
+    letter-spacing:.06rem
+}
+.similar-card{
+    background-color: #2f2f2f;
+    color:#d2d2d2;
+    height:400px;
+    overflow:hidden;
+    margin-bottom:18px;
+}

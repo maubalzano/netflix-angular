@@ -17,6 +17,8 @@ import { infoReducer, InfoState } from './store/info/reducer.info';
 import { infoEffects } from './store/info/effects.info';
 import { MinutesToHoursPipe } from 'src/app/shared/pipes/minutes-to-hours.pipe';
 import { SearchComponent } from './pages/search/search.component';
+import { InfoModalComponent } from './components/info-modal/info-modal.component';
+import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
 
 export interface BrowseState {
   previews: previewsState,
@@ -35,12 +37,14 @@ const reducers: ActionReducerMap<BrowseState> = {
     PreviewCardComponent,
     PreviewsContainerComponent,
     MinutesToHoursPipe,
-    SearchComponent
+    SearchComponent,
+    InfoModalComponent
   ],
   imports: [
     CommonModule,
     BrowseRoutingModule,
     MatCarouselModule,
+    NgxSkeletonLoaderModule,
     StoreModule.forFeature('browse', reducers),
     EffectsModule.forFeature([previewsEffects, infoEffects])
   ]

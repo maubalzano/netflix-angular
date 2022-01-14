@@ -3,22 +3,19 @@
         <div class="suggests container-fluid d-flex p-4 pt-5" *ngIf="results.length">
             <p class="mr-3"><small>Dai un'occhiata ai titoli correlati a: </small></p>
             <ul class="text-light d-flex flex-wrap">
-                <li *ngFor="let result of results.slice(0,6)" class="mr-2"><small>{{result.name}} |</small></li>
+                <li *ngFor="let result of results.slice(0,6); let i = index" class="mr-2"><small>{{result.name}}  {{i != 5 ? '|' : ''}}</small></li>
             </ul>
         </div>
 
     <div class="container-fluid d-flex flex-wrap">
         <div *ngFor="let result of results" class="preview-row col-2 p-1 mb-5">
             <div class="rounded position-relative preview-container">
-                <netflix-preview-card *ngIf="result; else skeleton" 
+                <netflix-preview-card *ngIf="result" 
                     [preview]="result" 
         
                     class="position-relative"
-                    (getProductDetails)="getProductDetails({id: result.id, type: result.type})" 
+                    (getProductDetails)="getProductDetails({productId: result.id, productType: result.type})" 
                     [info]="info[result.id]"></netflix-preview-card>
-                <ng-template #skeleton>
-                    <h2 class="text-light"></h2>
-                </ng-template>
             </div>
     
         </div>

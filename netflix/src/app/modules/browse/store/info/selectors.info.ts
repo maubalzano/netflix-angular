@@ -6,3 +6,7 @@ export const getProductInfo = createSelector(
     getBrowseState,
     (state: BrowseState) => state.info.info
 )
+export const getModalInfo = createSelector(
+    getBrowseState,
+    (state: BrowseState) => state.info.currentInfoModal
+)

@@ -1,12 +1,17 @@
 <div class="position-relative previews-container" style="z-index:5">
     <ng-container *ngIf="movies$">
         <div class="carousel-container">
-            <netflix-preview-carousel [list$]="movies$" (getProductDetails)="getProductDetails($event)" [info]="info" ></netflix-preview-carousel>
+            <netflix-preview-carousel [list$]="movies$" (getProductDetails)="getProductDetails($event)" [info]="info" (onOpenModal)="openModal($event)"></netflix-preview-carousel>
         </div>
     </ng-container>
     <ng-container *ngIf="movies$">
         <div class="carousel-container">
-            <netflix-preview-carousel [list$]="series$" (getProductDetails)="getProductDetails($event)" [info]="info" ></netflix-preview-carousel>
+            <netflix-preview-carousel [list$]="series$" (getProductDetails)="getProductDetails($event)" [info]="info" (onOpenModal)="openModal($event)"></netflix-preview-carousel>
         </div>
     </ng-container>
 </div>
+<ng-container *ngIf="(currentModalInfo$ | async) as modalInfo" >
+    <div class="modal-container">
+        <netflix-info-modal [info]="modalInfo" *ngIf="modalInfo"(closeModal)="closeModal()" style="position:relative"[@onModalOpen]></netflix-info-modal>
+    </div>
+</ng-container>

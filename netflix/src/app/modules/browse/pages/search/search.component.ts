@@ -20,8 +20,8 @@ export class SearchComponent implements OnInit {
     private readonly store: Store
   ) { }
 
-  getProductDetails(product: {id: number, type:string}){
-    this.store.dispatch(getInfo({product: product}))
+  getProductDetails(product: {productId: number, productType:string}){
+    this.store.dispatch(getInfo(product))
   }
   ngOnInit(): void {
     this.searchResults$ = this.store.select(getSearchResults);
